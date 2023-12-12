@@ -99,7 +99,7 @@ function removeWatchlistItem(imdbid) {
 }
 
 function renderPage() {
-  if (window.location.pathname === "/index.html") {
+  if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
     if (movieName) {
       movieInputElement.placeholder = movieName;
     }
@@ -108,7 +108,7 @@ function renderPage() {
     }
   }
 
-  if (window.location.pathname === "/watchlist.html") {
+  if (window.location.pathname === "/watchlist.html" || window.location.pathname === "/watchlist") {
     if (watchlistArray) {
       renderMovies(watchlistArray);
     }
@@ -119,11 +119,11 @@ const initializeFormEventListener = () => {
   movieSearchForm = document.getElementById("movie-search-form");
   movieInputElement = document.getElementById("movie-name");
   mainContent = document.getElementById("main-content");
-  watchlistArray = JSON.parse(localStorage.getItem("movie-watchlist"));
+  watchlistArray = JSON.parse(localStorage.getItem("movie-watchlist") || "[]");
 
   movieSearchForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    searchMovie();
+    searchMovie().catch(console.error);
   });
 
   mainContent.addEventListener("click", (event) => {
