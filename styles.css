@@ -137,7 +137,7 @@ header form #movie-name {
   color: #a5a5a5;
   border: none;
   font-family: Inter;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   border-radius: 0.375rem 0rem 0rem 0.375rem;
   background: #2e2e2f;
@@ -150,7 +150,7 @@ header form #movie-name {
 #search-btn {
   border: none;
   font-family: Inter;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   width: 6rem;

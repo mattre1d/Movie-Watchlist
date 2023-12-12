@@ -75,7 +75,6 @@ const searchMovie = async () => {
       </div>
       `;
   }
-  movieInputElement.placeholder = movieName;
   movieInputElement.value = "";
 };
 
@@ -100,9 +99,6 @@ function removeWatchlistItem(imdbid) {
 
 function renderPage() {
   if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
-    if (movieName) {
-      movieInputElement.placeholder = movieName;
-    }
     if (moviesArray) {
       renderMovies(moviesArray);
     }
