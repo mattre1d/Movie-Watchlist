@@ -116,8 +116,7 @@ header * {
   transform-origin: center;
 }
 
-.header-text a:hover::after,
-.header-text a:focus::after {
+.header-text a:hover::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
   transform: scale(1);
