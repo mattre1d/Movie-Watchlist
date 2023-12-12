@@ -154,11 +154,6 @@ header form #movie-name {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#search-btn:hover {
-  background: #6e6e6e;
-  color: black;
-}
-
 main {
   position: relative;
   top: 2.4rem;
@@ -175,58 +170,38 @@ main p {
 }
 
 main a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding-left: 1.7rem;
-    transition: color 0.3s;
-  }
-  
-  main a::before, main a::after {
-    content: '';
-    position: absolute;
-    left: 0.6rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0.7rem;
-    height: 0.7rem; 
-    background-size: 0.7rem;
-    background-repeat: no-repeat;
-    transition: opacity 0.3s;
-  }
-  
-  main a::before {
-    background-image: url("images/circle-plus-solid.svg");
-  }
-  
-  main a::after {
-    background-image: url("images/circle-plus-gray.svg");
-    opacity: 0;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding-left: 1.7rem;
+  transition: color 0.3s;
+}
 
-  main a.remove-link::before {
-    background-image: url("images/circle-minus-solid.svg");
-  }
+main a::before,
+main a::after {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.7rem;
+  height: 0.7rem;
+  background-size: 0.7rem;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s;
+}
 
-  main a.remove-link::after {
-    background-image: url("images/circle-minus-gray.svg");
-  }
-  
-  main a:hover, #duration-category a:hover {
-    color: #a5a5a5;
-  }
-  
-  main a:hover::before, #duration-category a:hover::before {
-    opacity: 0; 
-  }
-  
-  main a:hover::after, #duration-category a:hover::after {
-    opacity: 1; 
-  }
+main a::before {
+  background-image: url("images/circle-plus-solid.svg");
+}
+
+main a.remove-link::before {
+  background-image: url("images/circle-minus-solid.svg");
+}
 
 #placeholder {
   display: flex;
@@ -428,12 +403,41 @@ hr {
 }
 
 @media (hover: hover) {
-    .header-text a:hover::after {
-      opacity: 1;
-      transform: translate3d(0, 0.2em, 0);
-      transform: scale(1);
-    }
-  }  
+  .header-text a:hover::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+    transform: scale(1);
+  }
+
+  #search-btn:hover {
+    background: #6e6e6e;
+    color: black;
+  }
+
+  main a:hover,
+  #duration-category a:hover {
+    color: #a5a5a5;
+  }
+
+  main a:hover::before,
+  #duration-category a:hover::before {
+    opacity: 0;
+  }
+
+  main a:hover::after,
+  #duration-category a:hover::after {
+    opacity: 1;
+  }
+
+  main a::after {
+    background-image: url("images/circle-plus-gray.svg");
+    opacity: 0;
+  }
+
+  main a.remove-link::after {
+    background-image: url("images/circle-minus-gray.svg");
+  }
+}
 
 @media (min-width: 768px) {
   html {
