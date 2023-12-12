@@ -4,7 +4,7 @@ This project is a simple web application for practicing API usage in web develop
 
 ## Overview
 
-The Movie Search Application is a user-friendly application that allows users to search for movies using the Open Movies API. It features the ability to add movies to a personal watchlist which is stored locally in the browser. This project was used to practice and understand how to integrate external APIs into a web application as well as manage local storage.
+The Movie Search Application is a user-friendly application that allows users to search for movies using the Open Movies API. It features the ability to add movies to a personal watchlist which is stored locally in the browser. This project was used to practice and understand how to integrate external APIs into a web application as well as manage local storage. Visit the live site here: [openmovieapi-watchlist.netlify.app](https://openmovieapi-watchlist.netlify.app).
 
 ## Features
 
