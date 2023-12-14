@@ -18,30 +18,29 @@
       <div class="header-container">
         <div class="header-text transition-fade">
           <h1>Find your film</h1>
-          <a
-            href="/watchlist.html"
-            id="header-link"
-            data-swup-animation="left"
+          <a href="/watchlist.html" id="header-link" data-swup-animation="left"
             >My Watchlist</a
           >
         </div>
         <form id="movie-search-form" class="transition-fade">
           <label for="movie-name"></label>
           <input id="movie-name" type="text" />
-          <input
-            id="search-btn"
-            type="submit"
-            value="Search"
-          />
+          <input id="search-btn" type="submit" value="Search" />
         </form>
       </div>
     </header>
-    <main id="main-content" class="transition-slide">
+    <main>
+      <div id="main-content" class="transition-slide">
         <div id="spacer"></div>
         <div id="placeholder">
-        <img src="images/film.svg" alt="film icon" />
-        <p class="start-exploring">Start exploring</p>
-    </div>
+          <img src="images/film.svg" alt="film icon" />
+          <p class="start-exploring">Start exploring</p>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <a href="#" id="prev-btn" data-swup-animation="left">Prev</a>
+        <a href="#" id="next-btn">Next</a>
+      </div>
     </main>
     <script defer src="https://unpkg.com/swup@4"></script>
     <script defer src="/main.js"></script>

@@ -140,7 +140,7 @@ header form #movie-name {
   background-position: 0.6rem;
 }
 
-#search-btn {
+#search-btn, #next-btn, #prev-btn {
   border: none;
   font-family: Inter;
   font-size: 1rem;
@@ -155,6 +155,13 @@ header form #movie-name {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#main-content {
   position: relative;
   top: 2.4rem;
   display: flex;
@@ -163,13 +170,13 @@ main {
   align-items: center;
 }
 
-main p {
+#main-content p {
   margin: 0.55rem 0;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-main a {
+#main-content a {
   position: relative;
   display: flex;
   align-items: center;
@@ -181,8 +188,8 @@ main a {
   transition: color 0.3s;
 }
 
-main a::before,
-main a::after {
+#main-content a::before,
+#main-content a::after {
   content: "";
   position: absolute;
   left: 0.6rem;
@@ -195,11 +202,11 @@ main a::after {
   transition: opacity 0.3s;
 }
 
-main a::before {
+#main-content a::before {
   background-image: url("images/circle-plus-solid.svg");
 }
 
-main a.remove-link::before {
+#main-content a.remove-link::before {
   background-image: url("images/circle-minus-solid.svg");
 }
 
@@ -242,6 +249,7 @@ main a.remove-link::before {
 #movie-title {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 #movie-title h3 {
@@ -303,6 +311,22 @@ hr {
 
 .hide-form {
   visibility: hidden;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+}
+
+#next-btn, #prev-btn {
+    display: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.375rem;
 }
 
 .loader {
@@ -409,32 +433,32 @@ hr {
     transform: scale(1);
   }
 
-  #search-btn:hover {
+  #search-btn:hover, #next-btn:hover, #prev-btn:hover {
     background: #6e6e6e;
     color: black;
   }
 
-  main a:hover,
+  #main-content a:hover,
   #duration-category a:hover {
     color: #a5a5a5;
   }
 
-  main a:hover::before,
+  #main-content a:hover::before,
   #duration-category a:hover::before {
     opacity: 0;
   }
 
-  main a:hover::after,
+  #main-content a:hover::after,
   #duration-category a:hover::after {
     opacity: 1;
   }
 
-  main a::after {
+  #main-content a::after {
     background-image: url("images/circle-plus-gray.svg");
     opacity: 0;
   }
 
-  main a.remove-link::after {
+  #main-content a.remove-link::after {
     background-image: url("images/circle-minus-gray.svg");
   }
 }
@@ -466,16 +490,16 @@ hr {
     line-height: 1.25rem;
   }
 
-  #search-btn {
+  #search-btn, #next-btn, #prev-btn {
     width: 10rem;
   }
 
-  main p {
+  #main-content p {
     line-height: 1rem;
   }
 
   #movie-container,
-  hr {
+  hr, .nav-buttons {
     width: 60%;
   }
 }
@@ -490,7 +514,7 @@ hr {
     min-height: 12rem;
   }
 
-  main {
+  #main-content {
     top: 3.5rem;
   }
 
@@ -515,12 +539,16 @@ hr {
     width: 15rem;
   }
 
-  main p {
+  .nav-buttons {
+    margin-top: 1rem;
+  }
+
+  #main-content p {
     line-height: 1rem;
   }
 
   #movie-container,
-  hr {
+  hr, .nav-buttons {
     width: 50%;
   }
   
